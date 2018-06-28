@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wearable.view.drawer.WearableDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/transparance"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/menuImageTarget"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:id="@+id/menuLYT">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:background="@color/colorWhiteTransparance">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/menuRequestCorrectionNoLyt"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="Koreksi No"
+                            android:textColor="@android:color/black"/>
+
+                        <TextView
+                            android:id="@+id/menuRequestCorrectionNo"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@android:color/black"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/menuTargetAngleLyt"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Arah Sasaran"
+                            android:textSize="20dp"
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:id="@+id/menuTargetAngleInput"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textSize="20dp"
+                            android:textColor="@android:color/black"
+                            />
+                        <TextView
+                            android:id="@+id/menuTargetAngleInputMeasure"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Derajat"
+                            android:textSize="20dp"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/menuTargetDistanceLyt"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Jarak Sasaran"
+                            android:textSize="20dp"
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:id="@+id/menuTargetDistanceInput"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Meter"
+                            android:textSize="20dp"
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:id="@+id/menuTargetDistanceInputMeasue"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Meter"
+                            android:textSize="20dp"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/menuKoordinatJaupanLyt"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="KO Jaupan"
+                            android:textSize="20dp"
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:id="@+id/menuKOJaupanTxt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textSize="20dp"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/menuKoordinatJaupanDesLyt"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="KO Jaupan"
+                            android:textSize="20dp"
+                            android:textColor="@android:color/black"
+                            android:visibility="invisible"/>
+                        <TextView
+                            android:id="@+id/menuKOJaupanDesTxt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textSize="20dp"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/menuKoordinatSasaranLyt"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="KO Sasaran"
+                            android:textSize="20dp"
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:id="@+id/menuKOSasaranTxt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textSize="20dp"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/menuKoordinatSasaranDesLyt"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="KO Sasaran"
+                            android:textSize="20dp"
+                            android:textColor="@android:color/black"
+                            android:visibility="invisible"/>
+                        <TextView
+                            android:id="@+id/menuKOSasaranTxtDes"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textSize="20dp"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/menuFireOptLyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="30dp"
+                    android:background="@color/colorWhiteTransparance"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_centerInParent="true"
+                    >
+                    <!--<ImageView-->
+                    <!--android:layout_width="66dp"-->
+                    <!--android:layout_height="66dp"-->
+                    <!--android:id="@+id/menuAddObjectSituation"-->
+                    <!--android:src="@drawable/btn_fo_mode"-->
+                    <!--android:layout_marginRight="30dp"/>-->
+                    <!--<ImageView-->
+                    <!--android:layout_width="66dp"-->
+                    <!--android:layout_height="66dp"-->
+                    <!--android:id="@+id/menuAddCorrection"-->
+                    <!--android:src="@drawable/accept_active"/>-->
+                    <!--<ImageView-->
+                    <!--android:layout_width="66dp"-->
+                    <!--android:layout_height="66dp"-->
+                    <!--android:id="@+id/menuAddNew"-->
+                    <!--android:src="@drawable/btn_zoom_in"-->
+                    <!--android:layout_marginLeft="30dp"-->
+                    <!--/>-->
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/menuAddObjectSituation"
+                        android:text="PSK KWN"
+                        android:padding="5dp"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorDarkTNI"/>
+                    <LinearLayout
+                        android:layout_width="2dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite">
+
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/menuAddCorrection"
+                        android:text="KOREKSI"
+                        android:padding="5dp"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorDarkTNI"/>
+                    <LinearLayout
+                        android:layout_width="2dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"></LinearLayout>
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/menuAddNew"
+                        android:text="KIRIM"
+                        android:padding="5dp"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorDarkTNI"/>
+                    <LinearLayout
+                        android:layout_width="2dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"></LinearLayout>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:textColor="@color/colorWhite"
+                        android:id="@+id/menuCancel"
+                        android:background="@color/colorDarkTNI"
+                        android:text="BATAL"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="30dp"
+                    android:id="@+id/menuOKlyt"
+                    android:visibility="gone">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorWhite"
+                        android:id="@+id/menuOKbtn"
+                        android:text="OK"
+                        android:background="@color/colorDarkTNI"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</android.support.wearable.view.drawer.WearableDrawerLayout>
