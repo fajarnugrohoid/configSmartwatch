@@ -869,7 +869,7 @@ public class BroadcastDataParser {
                         Log.d(LOG, "oldLat:" + oldLat + "===lat:" + lat);
                         Log.d(LOG, "oldLon:" + oldLon + "===lat:" + lon);
 
-                        locationSentence += "000,"+address + "," + "s" + "," + iDTime + ","
+                        locationSentence += "006,"+address + "," + "s" + "," + iDTime + ","
                                 + new DecimalFormat("#0.000000").format(oldLat) + "," + new DecimalFormat("#0.000000").format(oldLon) + "," + head1 + "," + head2 + ","
                                 + iComm + "," + iGpsValid + "," + iGpsQuality;
                         Log.d("MainActivity" , "address : "+address);

@@ -130,13 +130,13 @@ public class TShapeImage extends TMapShape {
                         }
                         case RightCenter:
                         {
-                            textPaint.setTextAlign(Paint.Align.RIGHT);
+                            textPaint.setTextAlign(Paint.Align.CENTER);
                             textPaint.getTextBounds(labels[i].Text,0,labels[i].Text.length(),txtBounds);
                             textPaint.setColor(Color.WHITE);
                             if (backgroundImg!=null) {
                                 c.drawBitmap(backgroundImg, posIcon.x-backgroundImg.getWidth() + 25,posIcon.y-backgroundImg.getHeight() + 45, backPaint);
                             }
-                            c.drawText(labels[i].Text,posIcon.x+labels[i].OffsetPoint.x-txtBounds.width(),posIcon.y+labels[i].OffsetPoint.y-txtBounds.height()-15,textPaint);
+                            c.drawText(labels[i].Text,posIcon.x+labels[i].OffsetPoint.x-txtBounds.width() - 23,posIcon.y+labels[i].OffsetPoint.y-txtBounds.height()-25,textPaint);
                             break;
                         }
                         case TopCenter:

@@ -284,7 +284,7 @@ public class BroadcastService extends Service {
                     Log.d(LOG_TAG, "arrParsed[5] bcast:" + arrParsed[5]);
                     Log.d(LOG_TAG, "arrParsed[6] bcast:" + arrParsed[6]);
                     if (arrPortName[0].equalsIgnoreCase("bcast")){
-                        if (arrParsed[0].equalsIgnoreCase("000")) {
+                        if (arrParsed[0].equalsIgnoreCase("006")) {
                             for (int i = 0; i < arrParsed.length; i++) {
                                 Lat = Double.parseDouble(arrParsed[4]);
                                 Long = Double.parseDouble(arrParsed[5]);

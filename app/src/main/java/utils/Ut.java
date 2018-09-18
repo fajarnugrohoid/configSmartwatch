@@ -169,7 +169,7 @@ public class Ut implements OpenStreetMapConstants, OpenStreetMapViewConstants {
     private static String DATA_FROM_POSKO = "/mnt/usb1/bms_data";
 
     public static String getExternalStorageDirectory() {
-        final File signalFile = new File(Environment.getExternalStorageDirectory().getPath()+SIGNAL_FILE_NAME);
+        final File signalFile = new File(Environment.getExternalStorageDirectory().getPath() + "/Download/" + SIGNAL_FILE_NAME);
         if(signalFile.exists())
             return (EXTERNAL_SD);
         else
@@ -185,7 +185,13 @@ public class Ut implements OpenStreetMapConstants, OpenStreetMapViewConstants {
     }
 
     public static File getBMSMainDir(final Context mCtx, final String aFolderName) {
-        return getDir(mCtx, "pref_dir_main", Ut.getExternalStorageDirectory()+"/bms/", aFolderName);
+
+        String oriPathLocation = Ut.getExternalStorageDirectory();
+        Log.d("path location", "oriPathLocation:" + oriPathLocation);
+
+        return getDir(mCtx, "pref_dir_main", oriPathLocation+"/Download/bms/", aFolderName);
+
+        //return getDir(mCtx, "pref_dir_main", Ut.getExternalStorageDirectory()+"/Download/bms/", aFolderName);
     }
 
     public static File getBMSMapsDir(final Context mCtx) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.wearable.view.drawer.WearableDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.wear.widget.SwipeDismissFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
@@ -8,9 +8,50 @@
     tools:context="com.bms.user.bmssmartwatch.MainActivity"
     tools:deviceIds="wear">
 
+
+
     <org.osmdroid.views.MapView android:id="@+id/map"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tilesource="Mapnik"
         />
-</android.support.wearable.view.drawer.WearableDrawerLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="97dp"
+            android:layout_marginTop="163dp"
+            android:visibility="gone"
+            android:text="Show" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/ivTacticalSymbol"
+            tools:layout_gravity="center_vertical|center_horizontal" />
+
+        <ImageView
+            android:id="@+id/ic_disconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_disconnect_small"
+            android:visibility="gone"
+            />
+
+        <!--<fragment-->
+            <!--android:id="@+id/fragmentSMS"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="450dp"-->
+            <!--android:name="com.bms.user.bmssmartwatch.SMSFragment"/>-->
+    </RelativeLayout>
+
+
+</android.support.wear.widget.SwipeDismissFrameLayout>

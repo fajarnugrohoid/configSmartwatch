@@ -17,6 +17,7 @@ import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.Overlay;
 
+
 import java.util.ArrayList;
 
 /**
@@ -94,9 +95,11 @@ public class TShapeOverlay extends Overlay {
     }
 
     public boolean onLongPress(MotionEvent e, MapView mapView) {
-        GeoPoint geoPoint = new GeoPoint(e.getX(), e.getY());
-        ShowPopUpAddObjectMethod.showPopUpMenuAction(this.ctx,geoPoint);
-        return false;
+        Point pt = new Point((int)e.getX(),(int)e.getY());
+
+        Log.d("Test",  pt.toString());
+        ShowPopUpAddObjectMethod.showPopUpMenuAction(this.ctx, mapView);
+        return true;
     }
 
 

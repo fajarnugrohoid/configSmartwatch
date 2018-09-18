@@ -58,9 +58,7 @@ public class SQLiteMapDatabase implements ICacheProvider {
                 final int dbFilesCnt = j;
                 if(aCreateNewDatabaseFile || j == 0)
                     j = j + 1;
-                // ������� ������ ������������� �������
                 mDatabase = new SQLiteDatabase[j];
-                // ��������� ������
                 j = 0; long minsize = 0;
                 for (int i = 0; i < files.length; i++) {
                     if(files[i].getName().startsWith(mBaseFile.getName()) && !files[i].getName().endsWith(JOURNAL)) {

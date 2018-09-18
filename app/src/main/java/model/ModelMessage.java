@@ -84,7 +84,6 @@ public class ModelMessage {
     }
 
 
-
     @Override
     public String toString() {
         return "message{ id:" + idModelMessage + ",message: " + message + "}";

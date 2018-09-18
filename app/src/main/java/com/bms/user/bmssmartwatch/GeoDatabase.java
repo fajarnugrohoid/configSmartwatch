@@ -567,7 +567,8 @@ public class GeoDatabase implements MasterConstants {
 
         if(ret == false)
             try {
-                //Toast.makeText(mCtx, mCtx.getText(R.string.message_geodata_notavailable), Toast.LENGTH_LONG).show();
+                Log.d(TAG, "GeoDatabase ret is false");
+                //Toast.makeText(mCtx, mCtx.getText("GeoDatabase Not Avala"), Toast.LENGTH_LONG).show();
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -961,6 +962,78 @@ public class GeoDatabase implements MasterConstants {
 
         return null;
     }
+
+    public Cursor getListSkenario(){
+        if (isDatabaseReady()) {
+            return mDatabase.rawQuery(String.format("SELECT p.pskenarioid,p.name,p.descr,p.categoryid, p.date, p.cnt,  p.skenariosrcid ,ps.id,ps.lat, ps.lon, p.descr, p.categoryid, p.style, p.skenariosrcid FROM pskenario as p\n" +
+                    "INNER JOIN pskenariopoints as ps ON (p.pskenarioid=ps.pskenarioid)", ""), null);
+        }
+        return null;
+    }
+
+    public Cursor getTacticalSymbol(String symbolId){
+        if (isDatabaseReady()) {
+            return mDatabase.rawQuery(String.format("SELECT * FROM tactical_symbol WHERE symid=" + symbolId, ""), null);
+        }
+        return null;
+    }
+
+    public long insertSkenario(String name, String descr, String date,
+                               String show, int cnt, String duration, String distance,
+                               int categoryid, String activity, String style, String skenariosrcid){
+        long newId = 0;
+        if (isDatabaseReady()) {
+            final ContentValues cv = new ContentValues();
+            //cv.put("pskenarioid", pskenarioid);
+            cv.put("name", name);
+            cv.put("descr", descr);
+            cv.put("date", date);
+            cv.put("show", show);
+            cv.put("cnt", cnt);
+            cv.put("duration", duration);
+            cv.put("distance", distance);
+            cv.put("categoryid", categoryid);
+            cv.put("activity", activity);
+            cv.put("style", style);
+            cv.put("skenariosrcid", skenariosrcid);
+            newId = this.mDatabase.insert("pskenario", null, cv);
+        }
+        return newId;
+    }
+
+    public void insertSkenarioPoints(int pskenarioid, Double lat, Double lon, String alt,
+                               String speed, String date){
+        long newId;
+        if (isDatabaseReady()) {
+            final ContentValues cv = new ContentValues();
+            cv.put("pskenarioid", pskenarioid);
+            cv.put("lat", lat);
+            cv.put("lon", lon);
+            cv.put("alt", alt);
+            cv.put("speed", speed);
+            cv.put("date", date);
+            newId = this.mDatabase.insert("pskenariopoints", null, cv);
+        }
+    }
+
+    public int deleteSkenarioById(int pSkenarioId) {
+        Log.d(TAG, "DbManager deleteSkenarioById");
+        int res = 0;
+        if (isDatabaseReady()) {
+
+            res = mDatabase.delete("pskenario", "pskenarioid=" + pSkenarioId, null);
+
+            Log.d(TAG, "DbManager deleteSkenarioById c1 " + res);
+            if (res >= 1) {
+                res = mDatabase.delete("pskenariopoints", "pskenarioid=" + pSkenarioId, null);
+                Log.d(TAG, "DbManager deleteSkenarioById c2 " + res);
+            }
+
+        }
+        return res;
+    }
+
+
 
     Cursor getKendaliListCursor(final String units) {
         if (isDatabaseReady()) {
