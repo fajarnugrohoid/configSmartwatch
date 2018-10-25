@@ -1,0 +1,143 @@
+09-19 13:50:29.877 2916-2916/? I/zygote: Late-enabling -Xcheck:jni
+09-19 13:50:30.757 2916-2940/? I/zygote: Background concurrent copying GC freed 518(374KB) AllocSpace objects, 0(0B) LOS objects, 35% free, 934KB/1446KB, paused 3.923ms total 168.344ms
+09-19 13:50:31.878 2916-2916/com.bms.user.configurationsmartwatch I/InstantRun: starting instant run server: is main process
+09-19 13:50:32.336 2916-2916/com.bms.user.configurationsmartwatch V/ConfigurationSmartwatch: Storage Permission is granted
+09-19 13:50:32.338 2916-2916/com.bms.user.configurationsmartwatch V/ConfigurationSmartwatch: Change Wifi State Permission is granted
+09-19 13:50:32.339 2916-2916/com.bms.user.configurationsmartwatch V/ConfigurationSmartwatch: Access Network State Permission is granted
+09-19 13:50:32.340 2916-2916/com.bms.user.configurationsmartwatch V/ConfigurationSmartwatch: Access Wifi State Permission is granted
+09-19 13:50:32.352 2916-2916/com.bms.user.configurationsmartwatch D/ConfigurationSmartwatch: networkInfo:[type: WIFI[], state: CONNECTED/CONNECTED, reason: (unspecified), extra: "NewRND", failover: false, available: true, roaming: false, metered: false]
+    getType:1
+09-19 13:50:32.363 2916-2916/com.bms.user.configurationsmartwatch D/ConfigurationSmartwatch: ip:-1609586496
+09-19 13:50:32.369 2916-2916/com.bms.user.configurationsmartwatch D/ConfigurationSmartwatch: Ipv4Address:192.168.15.160
+09-19 13:50:32.873 2916-2916/com.bms.user.configurationsmartwatch D/ConfigurationSmartwatch: configuredNetworks:[ID: 0 SSID: "FPMIPA-RuangDekan" PROVIDER-NAME: null BSSID: null FQDN: null PRIO: 0 HIDDEN: true
+     NetworkSelectionStatus NETWORK_SELECTION_ENABLED
+     hasEverConnected: false
+     KeyMgmt: WPA_PSK Protocols: WPA RSN
+     AuthAlgorithms: OPEN
+     PairwiseCiphers: TKIP CCMP
+     GroupCiphers: WEP40 WEP104 TKIP CCMP
+     PSK: *
+    Enterprise config:
+    IP config:
+    IP assignment: DHCP
+    Proxy settings: NONE
+     cuid=10019 cname=com.google.uid.shared:10019 luid=10019 lname=com.google.uid.shared:10019 lcuid=0 userApproved=USER_UNSPECIFIED noInternetAccessExpected=false roamingFailureBlackListTimeMilli: 1000
+    , ID: 1 SSID: "MITLA IT LAB INDONESIA" PROVIDER-NAME: null BSSID: null FQDN: null PRIO: 0 HIDDEN: false
+     NetworkSelectionStatus NETWORK_SELECTION_ENABLED
+     hasEverConnected: false
+     KeyMgmt: NONE Protocols: WPA RSN
+     AuthAlgorithms: OPEN
+     PairwiseCiphers: TKIP CCMP
+     GroupCiphers: WEP40 WEP104 TKIP CCMP
+     PSK:
+    Enterprise config:
+    IP config:
+    IP assignment: DHCP
+    Proxy settings: NONE
+     cuid=10019 cname=com.google.uid.shared:10019 luid=10019 lname=com.google.uid.shared:10019 lcuid=0 userApproved=USER_UNSPECIFIED noInternetAccessExpected=false roamingFailureBlackListTimeMilli: 1000
+    , ID: 2 SSID: "HIS Wifi Centre" PROVIDER-NAME: null BSSID: null FQDN: null PRIO: 0 HIDDEN: false
+     NetworkSelectionStatus NETWORK_SELECTION_ENABLED
+     hasEverConnected: false
+     KeyMgmt: NONE Protocols: WPA RSN
+     AuthAlgorithms: OPEN
+     PairwiseCiphers: TKIP CCMP
+     GroupCiphers: WEP40 WEP104 TKIP CCMP
+     PSK:
+    Enterprise config:
+    IP config:
+    IP assignment: DHCP
+    Proxy settings: NONE
+     cuid=10019 cname=com.google.uid.shared:10019 luid=10019 lname=com.google.uid.shared:10019 lcuid=0 userApproved=USER_UNSPECIFIED noInternetAccessExpected=false roamingFailureBlackListTimeMilli: 1000
+    , ID: 3 SSID: "9u9um" PROVIDER-NAME: null BSSID: null FQDN: null PRIO: 0 HIDDEN: true
+     NetworkSelectionStatus NETWORK_SELECTION_ENABLED
+     hasEverConnected: false
+     KeyMgmt: WPA_PSK Protocols: WPA RSN
+     AuthAlgorithms: OPEN
+     PairwiseCiphers: TKIP CCMP
+     GroupCiphers: WEP40 WEP104 TKIP CCMP
+     PSK: *
+    Enterprise config:
+    IP config:
+    IP assignment: DHCP
+    Proxy settings: NONE
+     cuid=10019 cname=com.google.uid.shared:10019 luid=10019 lname=com.google.uid.shared:10019 lcuid=0 userApproved=USER_UNSPECIFIED noInternetAccessExpected=false roamingFailureBlackListTimeMilli: 1000
+    , ID: 4 SSID: "WISMA DIRGANTARA" PROVIDER-NAME: null BSSID: null FQDN: null PRIO: 0 HIDDEN: false
+     NetworkSelectionStatus NETWORK_SELECTION_ENABLED
+     hasEverConnected: false
+     KeyMgmt: NONE Protocols: WPA RSN
+     AuthAlgorithms: OPEN
+     PairwiseCiphers: TKIP CCMP
+     GroupCiphers: WEP40 WEP104 TKIP CCMP
+     PSK:
+    Enterprise config:
+    IP config:
+    IP assignment: DHCP
+    Proxy settings: NONE
+     cuid=10019 cname=com.google.uid.shared:10019 luid=10019 lname=com.google.uid.shared:10019 lcuid=0 userApproved=USER_UNSPECIFIED noInternetAccessExpected=false roamingFailureBlackListTimeMilli: 1000
+    , ID: 5 SSID: "MITLA IT LAB INDONESIA" PROVIDER-NAME: null BSSID: null FQDN: null PRIO: 0 HIDDEN: true
+     NetworkSelectionStatus NETWORK_SELECTION_ENABLED
+     hasEverConnected: false
+     KeyMgmt: WPA_PSK Protocols: WPA RSN
+     AuthAlgorithms: OPEN
+     PairwiseCiphers: TKIP CCMP
+     GroupCiphers: WEP40 WEP104 TKIP CCMP
+     PSK: *
+    Enterprise config:
+    IP config:
+    IP assignment: DHCP
+    Proxy settings: NONE
+     cuid=10019 cname=com.google.uid.shared:10019 luid=10019 lname=com.google.uid.shared:10019 lcuid=0 userApproved=USER_UNSPECIFIED noInternetAccessExpected=false roamingFailureBlackListTimeMilli: 1000
+    , ID: 6 SSID: "Esteler77" PROVIDER-NAME: null BSSID: null FQDN: null PRIO: 0 HIDDEN: false
+     NetworkSelectionStatus NETWORK_SELECTION_ENABLED
+     hasEverConnected: false
+     KeyMgmt: NONE Protocols: WPA RSN
+     AuthAlgorithms: OPEN
+     PairwiseCiphers: TKIP CCMP
+     GroupCiphers: WEP40 WEP104 TKIP CCMP
+     PSK:
+    Enterprise config:
+    IP config:
+    IP assignment: DHCP
+    Proxy settings: NONE
+     cuid=10019 cname=com.google.uid.shared:10019 luid=10019 lname=com.google.uid.shared:10019 lcuid=0 userApproved=USER_UNSPECIFIED noInternetAccessExpected=false roamingFailureBlackListTimeMilli: 1000
+    , ID: 7 SSID: "@F
+09-19 13:50:32.874 2916-2916/com.bms.user.configurationsmartwatch D/ConfigurationSmartwatch: WifiConfiguration:0==wifiInfo.getNetworkId:9
+    WifiConfiguration:1==wifiInfo.getNetworkId:9
+    WifiConfiguration:2==wifiInfo.getNetworkId:9
+09-19 13:50:32.875 2916-2916/com.bms.user.configurationsmartwatch D/ConfigurationSmartwatch: WifiConfiguration:3==wifiInfo.getNetworkId:9
+    WifiConfiguration:4==wifiInfo.getNetworkId:9
+    WifiConfiguration:5==wifiInfo.getNetworkId:9
+    WifiConfiguration:6==wifiInfo.getNetworkId:9
+09-19 13:50:32.876 2916-2916/com.bms.user.configurationsmartwatch D/ConfigurationSmartwatch: WifiConfiguration:7==wifiInfo.getNetworkId:9
+    WifiConfiguration:8==wifiInfo.getNetworkId:9
+    WifiConfiguration:9==wifiInfo.getNetworkId:9
+09-19 13:50:32.878 2916-2916/com.bms.user.configurationsmartwatch D/ConfigurationSmartwatch: wifiConf:* ID: 9 SSID: "NewRND" PROVIDER-NAME: null BSSID: null FQDN: null PRIO: 0 HIDDEN: true
+     NetworkSelectionStatus NETWORK_SELECTION_ENABLED
+     hasEverConnected: true
+     numAssociation 8
+     validatedInternetAccess
+     KeyMgmt: WPA_PSK Protocols: WPA RSN
+     AuthAlgorithms: OPEN
+     PairwiseCiphers: TKIP CCMP
+     GroupCiphers: WEP40 WEP104 TKIP CCMP
+     PSK: *
+    Enterprise config:
+    IP config:
+    IP assignment: DHCP
+    Proxy settings: NONE
+     cuid=10019 cname=com.google.uid.shared:10019 luid=1000 lname=android.uid.system:1000 lcuid=1000 userApproved=USER_UNSPECIFIED noInternetAccessExpected=false roamingFailureBlackListTimeMilli: 1000
+09-19 13:50:33.136 2916-2974/com.bms.user.configurationsmartwatch D/OpenGLRenderer: HWUI GL Pipeline
+09-19 13:50:33.240 2916-2974/com.bms.user.configurationsmartwatch I/Adreno-EGL: <qeglDrvAPI_eglInitialize:379>: EGL 1.4 QUALCOMM build:  (I7af58d6928)
+    OpenGL ES Shader Compiler Version: E031.35.01.00
+    Build Date: 09/14/17 Thu
+    Local Branch: gfx-adreno.lnx.1.0
+    Remote Branch:
+    Local Patches:
+    Reconstruct Branch:
+09-19 13:50:33.328 2916-2974/com.bms.user.configurationsmartwatch I/vndksupport: sphal namespace is not configured for this process. Loading /vendor/lib/hw/gralloc.msm8909.so from the current namespace instead.
+09-19 13:50:33.380 2916-2974/com.bms.user.configurationsmartwatch I/OpenGLRenderer: Initialized EGL, version 1.4
+09-19 13:50:33.380 2916-2974/com.bms.user.configurationsmartwatch D/OpenGLRenderer: Swap behavior 1
+09-19 13:50:33.389 2916-2974/com.bms.user.configurationsmartwatch W/Adreno-ES20: <get_gpu_clk:229>: open failed: errno 13
+09-19 13:50:33.401 2916-2974/com.bms.user.configurationsmartwatch W/Adreno-EGL: <qeglDrvAPI_eglGetConfigAttrib:612>: EGL_BAD_ATTRIBUTE
+09-19 13:50:33.403 2916-2974/com.bms.user.configurationsmartwatch I/vndksupport: sphal namespace is not configured for this process. Loading /vendor/lib/hw/gralloc.msm8909.so from the current namespace instead.
+09-19 13:50:33.576 2916-2974/com.bms.user.configurationsmartwatch I/vndksupport: sphal namespace is not configured for this process. Loading /vendor/lib/hw/gralloc.msm8909.so from the current namespace instead.

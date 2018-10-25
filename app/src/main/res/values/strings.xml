@@ -1,4 +1,14 @@
 <resources>
-    <string name="app_name">BmsSmartwatch</string>
+    <string name="app_name">ConfigurationSmartwatch</string>
     <string name="hello_world">Hello World!</string>
+
+
+    <string name="arr_prompt">Choose</string>
+
+    <string-array name="send_to">
+        <item>PleaseChoose</item>
+        <item>CCU</item>
+        <item>Driverview</item>
+    </string-array>
+
 </resources>

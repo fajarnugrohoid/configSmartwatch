@@ -1,34 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/lytSMS"
+    android:id="@+id/lytInfo"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:layout_centerVertical="false"
     android:layout_gravity="center_vertical|center_horizontal"
     android:orientation="vertical"
     tools:layout_width="match_parent">
-    <!--<RelativeLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:gravity="center_vertical"-->
-        <!--android:layout_marginLeft="0dp"-->
-        <!--android:background="@color/colorGreenTNI">-->
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_centerHorizontal="true"-->
-            <!--android:textColor="@color/colorWhite"-->
-            <!--android:textSize="20dp"-->
-            <!--android:text="SMS"/>-->
-    <!--</RelativeLayout>-->
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@color/colorWhite">
-        <!-- android:layout_marginTop="50dp" -->
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -37,19 +21,16 @@
             android:orientation="vertical">
 
             <ListView
-                android:id="@+id/listViewSMS"
+                android:id="@+id/listViewInfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/lytSendSMS"
+                android:layout_above="@+id/lytCloseSMS"
                 android:divider="@color/black"
                 android:dividerHeight="1dp"
                 android:listSelector="@android:color/transparent"
                 android:stackFromBottom="true"
                 android:transcriptMode="alwaysScroll"
                  />
-            <!--android:layout_marginLeft="15dp"-->
-            <!--android:layout_marginRight="15dp"-->
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -68,7 +49,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/lytSendSMS"
+                android:id="@+id/lytCloseSMS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -78,22 +59,12 @@
                 android:paddingBottom="10dp">
 
                 <Button
-                    android:id="@+id/btnCloseSMS"
+                    android:id="@+id/btnClose"
                     android:layout_width="33dp"
                     android:layout_height="33dp"
                     android:layout_centerHorizontal="true"
                     android:background="@drawable/ic_cancel_red_24dp" />
-                <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_alignParentBottom="true">-->
-
-                <!--</LinearLayout>-->
             </LinearLayout>
-
-
         </RelativeLayout>
-
     </RelativeLayout>
 </RelativeLayout>
