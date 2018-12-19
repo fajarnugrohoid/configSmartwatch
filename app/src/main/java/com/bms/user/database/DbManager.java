@@ -189,6 +189,7 @@ public class DbManager {
                 modelSettingSmartwatch.setIpDriverView(c.getString(c.getColumnIndex("ip_driverview")));
                 modelSettingSmartwatch.setSdrLat(c.getString(c.getColumnIndex("sdr_lat")));
                 modelSettingSmartwatch.setSdrLon(c.getString(c.getColumnIndex("sdr_lon")));
+                modelSettingSmartwatch.setIsCompassExternal(c.getInt(c.getColumnIndex("is_compass_external")));
             }
         }
         return modelSettingSmartwatch;

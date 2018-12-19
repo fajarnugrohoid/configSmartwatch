@@ -2,6 +2,7 @@ package com.bms.user.model;
 
 public class ModelSettingSmartwatch {
     private int idx;
+    private long smartwatchId;
     private String sendTo;
     private String mapsName;
     private String mapsPath;
@@ -15,15 +16,21 @@ public class ModelSettingSmartwatch {
     private int tileSizePixel;
     private String sdrLat;
     private String sdrLon;
+    private Integer isCompassExternal; //use compass external(ccu) = 1 -> true, 0 : false
 
     public ModelSettingSmartwatch(){
         this.idx = 0;
+        this.smartwatchId = 0;
         this.mapsName = "";
         this.mapsPath = "";
         this.group = "0";
         this.ipCCU = "";
         this.ipDriverView = "";
         this.imageFileNameEnding = "";
+        this.minZoomLvl=0;
+        this.maxZoomLvl=0;
+        this.firstZoomLvl=0;
+        this.tileSizePixel=0;
     }
 
     public int getIdx() {
@@ -32,6 +39,14 @@ public class ModelSettingSmartwatch {
 
     public void setIdx(int idx) {
         this.idx = idx;
+    }
+
+    public long getSmartwatchId() {
+        return smartwatchId;
+    }
+
+    public void setSmartwatchId(long smartwatchId) {
+        this.smartwatchId = smartwatchId;
     }
 
     public String getMapsName() {
@@ -136,5 +151,13 @@ public class ModelSettingSmartwatch {
 
     public void setSdrLon(String sdrLon) {
         this.sdrLon = sdrLon;
+    }
+
+    public Integer getIsCompassExternal() {
+        return isCompassExternal;
+    }
+
+    public void setIsCompassExternal(Integer isCompassExternal) {
+        this.isCompassExternal = isCompassExternal;
     }
 }

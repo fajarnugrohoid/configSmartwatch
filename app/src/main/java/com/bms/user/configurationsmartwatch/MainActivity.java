@@ -107,6 +107,7 @@ public class MainActivity extends WearableActivity implements WearableListView.C
         viewItemList.add(new ListViewItem(R.drawable.ic_running, "Clear All"));
         viewItemList.add(new ListViewItem(R.drawable.ic_skateboard, "Set Ip"));
         viewItemList.add(new ListViewItem(R.drawable.ic_skateboard, "Connect Wifi"));
+        viewItemList.add(new ListViewItem(R.drawable.ic_skateboard, "Set Compass"));
 
         wearableListView.setAdapter(new ListViewAdapter(this, viewItemList));
         wearableListView.setClickListener(this);
@@ -288,10 +289,12 @@ public class MainActivity extends WearableActivity implements WearableListView.C
             int statusClearAll = dbManager.clearAll();
             ActivityManager am = (ActivityManager)getSystemService(Activity.ACTIVITY_SERVICE);
             am.killBackgroundProcesses("com.bms.user.bmssmartwatch");
+            am.killBackgroundProcesses("hrf.smartwatch");
             if (statusClearAll!=0){
                 Toast.makeText(this, "Data Berhasil Dihapus", Toast.LENGTH_SHORT).show();
             }
         }else if (idx==4){
+            //set Ip
             Intent appInfo = new Intent(this, SetIpActivity.class);
             startActivity(appInfo);
         }else if (idx==5){
@@ -299,6 +302,10 @@ public class MainActivity extends WearableActivity implements WearableListView.C
             ModelSetIp modelSetIp = new ModelSetIp();
             modelSetIp = dbManager.getWifiConfig();
             SET_WIFI(modelSetIp);
+        }else if (idx==6){
+            //set compass external or internal
+            Intent appInfo = new Intent(this, SetCompassActivity.class);
+            startActivity(appInfo);
         }
 
 

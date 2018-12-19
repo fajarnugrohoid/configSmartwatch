@@ -22,9 +22,10 @@ public class SendToActivity extends WearableActivity {
     private Button btnSave;
     private ArrayAdapter<String> adapter;
     private String chooseSendTo = "ccu", ipAddressCCU="192.168.0.1", ipAddressDv="192.168.0.2";
-    private EditText editTextIpCCU, editTextIpDv;
+    private long smartwatchId;
+    private EditText editTextIpCCU, editTextIpDv, editTextSmartwatchID;
     ArrayList<String> names=new ArrayList<String>();
-    ModelSettingSmartwatch modelSettingSmartwatch;
+    ModelSettingSmartwatch modelSettingSmartwatch, resModelSettingSmartwatch;
     DbManager dbManager;
 
 
@@ -38,6 +39,7 @@ public class SendToActivity extends WearableActivity {
         spinnerSendTo=(Spinner) findViewById(R.id.spinnerSendTo);
         editTextIpCCU = (EditText)findViewById(R.id.editTextIpCCU);
         editTextIpDv = (EditText)findViewById(R.id.editTextIpDriverView);
+        editTextSmartwatchID = (EditText)findViewById(R.id.editTextSmartwatchID);
         btnSave=(Button) findViewById(R.id.btnSaveSendTo);
 
         //ADAPTER
@@ -52,7 +54,9 @@ public class SendToActivity extends WearableActivity {
         modelSettingSmartwatch = dbManager.getSettingSmartwatch();
         editTextIpCCU.setText(modelSettingSmartwatch.getIpCCU());
         editTextIpDv.setText(modelSettingSmartwatch.getIpDriverView());
+        editTextSmartwatchID.setText(Long.toString(modelSettingSmartwatch.getSmartwatchId()));
         String selectedSendToData = modelSettingSmartwatch.getSendTo();
+
         if (selectedSendToData.equalsIgnoreCase("ccu")){
             spinnerSendTo.setSelection(1);
         }else if (selectedSendToData.equalsIgnoreCase("driverview")){
@@ -82,13 +86,18 @@ public class SendToActivity extends WearableActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-
+                resModelSettingSmartwatch = new ModelSettingSmartwatch();
                 ipAddressCCU = editTextIpCCU.getText().toString();
                 ipAddressDv = editTextIpDv.getText().toString();
+                smartwatchId = Long.valueOf(editTextSmartwatchID.getText().toString());
 
-                int result = dbManager.updateSettingSmartwatch(chooseSendTo, "",
-                        "", "",
-                        ipAddressCCU,ipAddressDv);
+
+                resModelSettingSmartwatch.setSendTo(chooseSendTo);
+                resModelSettingSmartwatch.setIpCCU(ipAddressCCU);
+                resModelSettingSmartwatch.setIpDriverView(ipAddressDv);
+                resModelSettingSmartwatch.setSmartwatchId(smartwatchId);
+
+                int result = dbManager.updateSettingSmartwatch(resModelSettingSmartwatch);
 
                 if( result != 0)
                 {

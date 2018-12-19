@@ -89,12 +89,12 @@ public class ChooseMapsActivity extends WearableActivity {
 
                 ModelSettingSmartwatch resModelChooseMaps = new ModelSettingSmartwatch();
 
-                resModelChooseMaps.setSendTo(modelChooseMapsArrayList.get(choosedIdx).getSendTo());
+                //resModelChooseMaps.setSendTo(modelChooseMapsArrayList.get(choosedIdx).getSendTo());
                 resModelChooseMaps.setMapsName(modelChooseMapsArrayList.get(choosedIdx).getMapsName());
                 resModelChooseMaps.setMapsPath(modelChooseMapsArrayList.get(choosedIdx).getMapsPath());
                 //resModelChooseMaps.setGroup(modelChooseMapsArrayList.get(choosedIdx).getGroup());
-                resModelChooseMaps.setIpCCU(modelChooseMapsArrayList.get(choosedIdx).getIpCCU());
-                resModelChooseMaps.setIpDriverView(modelChooseMapsArrayList.get(choosedIdx).getIpDriverView());
+                //resModelChooseMaps.setIpCCU(modelChooseMapsArrayList.get(choosedIdx).getIpCCU());
+                //resModelChooseMaps.setIpDriverView(modelChooseMapsArrayList.get(choosedIdx).getIpDriverView());
                 resModelChooseMaps.setImageFileNameEnding(modelChooseMapsArrayList.get(choosedIdx).getImageFileNameEnding());
                 resModelChooseMaps.setMinZoomLvl(modelChooseMapsArrayList.get(choosedIdx).getMinZoomLvl());
                 resModelChooseMaps.setMaxZoomLvl(modelChooseMapsArrayList.get(choosedIdx).getMaxZoomLvl());
@@ -108,12 +108,11 @@ public class ChooseMapsActivity extends WearableActivity {
                 if( result != 0)
                 {
                     Toast.makeText(getApplicationContext(), "Data Berhasil diupdate", Toast.LENGTH_SHORT).show();
-
-                }else
+                }
+                else
                 {
                     Toast.makeText(getApplicationContext(), "Failure", Toast.LENGTH_SHORT).show();
                 }
-                //CLOSE
             }
         });
 

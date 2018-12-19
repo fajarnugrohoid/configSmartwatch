@@ -75,6 +75,19 @@ public class DataSetMaps {
         modelChooseMaps.setSdrLon("106.832606");
         modelChooseMapsArrayList.add(modelChooseMaps);
 
+        modelChooseMaps = new ModelSettingSmartwatch();
+        modelChooseMaps.setIdx(5);
+        modelChooseMaps.setMapsName("monas satelite");
+        modelChooseMaps.setMapsPath("/Download/monas/satelite");
+        modelChooseMaps.setImageFileNameEnding(".jpg");
+        modelChooseMaps.setMinZoomLvl(17);
+        modelChooseMaps.setMaxZoomLvl(21);
+        modelChooseMaps.setFirstZoomLvl(17);
+        modelChooseMaps.setTileSizePixel(256);
+        modelChooseMaps.setSdrLat("-6.181279");
+        modelChooseMaps.setSdrLon("106.832606");
+        modelChooseMapsArrayList.add(modelChooseMaps);
+
         return modelChooseMapsArrayList;
     }
 

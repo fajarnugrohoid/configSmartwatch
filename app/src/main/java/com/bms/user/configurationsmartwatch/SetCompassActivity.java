@@ -5,11 +5,11 @@ import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.bms.user.database.DbManager;
@@ -17,34 +17,38 @@ import com.bms.user.model.ModelSettingSmartwatch;
 
 import java.util.ArrayList;
 
-public class SetGroupActivity extends WearableActivity {
+public class SetCompassActivity extends WearableActivity {
 
-    private Spinner spinnerSendTo;
-    private EditText editTextGroup;
     private Button btnSave;
     private ArrayAdapter<String> adapter;
-    private String chooseSendTo = "ccu";
-    ArrayList<String> names=new ArrayList<String>();
+    private Switch switchIsCompassExternal;
     DbManager dbManager;
-    private String setGroup = "0";
-    private String TAG = "setGroupActivity";
+    private String setCompass = "0";
+    private String TAG = "setCompassActivity";
+    Integer statusCompassExternal = null;
     ModelSettingSmartwatch modelSettingSmartwatch, resModelSettingSmartwatch;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lyt_set_group);
+        setContentView(R.layout.lyt_set_compass);
         setAmbientEnabled();
 
         Context ctx = getApplicationContext();
-        editTextGroup=(EditText)findViewById(R.id.editTextGroup);
-        btnSave=(Button) findViewById(R.id.btnSaveGroup);
+
+        switchIsCompassExternal=(Switch)findViewById(R.id.switchIsCompassExternal);
+        btnSave=(Button) findViewById(R.id.btnSaveCompass);
 
         dbManager = new DbManager(ctx);
         modelSettingSmartwatch = new ModelSettingSmartwatch();
         modelSettingSmartwatch = dbManager.getSettingSmartwatch();
-        editTextGroup.setText(modelSettingSmartwatch.getGroup());
+        Integer resCompassExternal =modelSettingSmartwatch.getIsCompassExternal();
+        if (resCompassExternal==1){
+            switchIsCompassExternal.setChecked(true);
+        }else{
+            switchIsCompassExternal.setChecked(false);
+        }
 
         btnSave.setOnClickListener(new View.OnClickListener() {
 
@@ -53,9 +57,16 @@ public class SetGroupActivity extends WearableActivity {
                 // TODO Auto-generated method stub
 
                 resModelSettingSmartwatch = new ModelSettingSmartwatch();
-                setGroup = editTextGroup.getText().toString();
-                resModelSettingSmartwatch.setGroup(setGroup);
-                Log.d(TAG, "getTextData:" + editTextGroup.getText().toString() + "-setGroup:" + setGroup);
+
+                // check current state of a Switch (true or false).
+                Boolean switchState = switchIsCompassExternal.isChecked();
+                if (switchState==true){
+                    statusCompassExternal = 1;
+                }else{
+                    statusCompassExternal = 0;
+                }
+                resModelSettingSmartwatch.setIsCompassExternal(statusCompassExternal);
+                Log.d(TAG, "switchIsCompassExternal:" + switchState);
                 int result = dbManager.updateSettingSmartwatch(resModelSettingSmartwatch);
 
                 if( result != 0)

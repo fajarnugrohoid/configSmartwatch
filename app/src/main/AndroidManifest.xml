@@ -67,6 +67,11 @@
             android:label="Set Group"
             >
         </activity>
+        <activity
+            android:name=".SetCompassActivity"
+            android:label="Set Compass"
+            >
+        </activity>
     </application>
 
 </manifest>

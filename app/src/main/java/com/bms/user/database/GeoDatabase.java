@@ -550,51 +550,54 @@ public class GeoDatabase implements MasterConstants {
         long res = 0;
         if (isDatabaseReady()) {
             final ContentValues cv = new ContentValues();
-            if (!modelSettingSmartwatch.getSendTo().equalsIgnoreCase("")){
+            if ( (modelSettingSmartwatch.getSendTo()!=null) && (!modelSettingSmartwatch.getSendTo().equalsIgnoreCase("")) ) {
                 cv.put("send_to", modelSettingSmartwatch.getSendTo());
             }
-            if (!modelSettingSmartwatch.getMapsName().equalsIgnoreCase("")){
+            if ( (modelSettingSmartwatch.getMapsName()!=null) && (!modelSettingSmartwatch.getMapsName().equalsIgnoreCase(""))){
                 cv.put("maps_name", modelSettingSmartwatch.getMapsName());
             }
-            if (!modelSettingSmartwatch.getMapsPath().equalsIgnoreCase("")){
+            if ( (modelSettingSmartwatch.getMapsPath()!=null) && (!modelSettingSmartwatch.getMapsPath().equalsIgnoreCase(""))){
                 cv.put("maps_path", modelSettingSmartwatch.getMapsPath());
             }
-            if ( modelSettingSmartwatch.getGroup()!=null || (!modelSettingSmartwatch.getGroup().equalsIgnoreCase(""))){
+            if ( (modelSettingSmartwatch.getGroup()!=null) && (!modelSettingSmartwatch.getGroup().equalsIgnoreCase(""))){
                 cv.put("set_group", modelSettingSmartwatch.getGroup());
             }
-            if (!modelSettingSmartwatch.getIpCCU().equalsIgnoreCase("")){
+            if ( (modelSettingSmartwatch.getIpCCU()!=null) && (!modelSettingSmartwatch.getIpCCU().equalsIgnoreCase("")) ) {
                 cv.put("ip_ccu", modelSettingSmartwatch.getIpCCU());
             }
-            if (!modelSettingSmartwatch.getIpDriverView().equalsIgnoreCase("")){
+            if ( (modelSettingSmartwatch.getIpDriverView()!=null) && (!modelSettingSmartwatch.getIpDriverView().equalsIgnoreCase("")) ) {
                 cv.put("ip_driverview", modelSettingSmartwatch.getIpDriverView());
             }
 
-
-            if (!modelSettingSmartwatch.getImageFileNameEnding().equalsIgnoreCase("")){
+            if ( (modelSettingSmartwatch.getImageFileNameEnding()!=null) && (!modelSettingSmartwatch.getImageFileNameEnding().equalsIgnoreCase(""))) {
                 cv.put("image_file_name_ending", modelSettingSmartwatch.getImageFileNameEnding());
             }
-            if (modelSettingSmartwatch.getMinZoomLvl()==0){
+            if (modelSettingSmartwatch.getMinZoomLvl()!=0){
                 cv.put("min_zoom_lvl", modelSettingSmartwatch.getMinZoomLvl());
             }
 
-            if (modelSettingSmartwatch.getMaxZoomLvl()==0){
+            if (modelSettingSmartwatch.getMaxZoomLvl()!=0){
                 cv.put("max_zoom_lvl", modelSettingSmartwatch.getMaxZoomLvl());
             }
 
-            if (modelSettingSmartwatch.getFirstZoomLvl()==0){
+            if (modelSettingSmartwatch.getFirstZoomLvl()!=0){
                 cv.put("first_zoom_lvl", modelSettingSmartwatch.getFirstZoomLvl());
             }
 
-            if (modelSettingSmartwatch.getTileSizePixel()==0){
+            if (modelSettingSmartwatch.getTileSizePixel()!=0){
                 cv.put("tile_size_pixel", modelSettingSmartwatch.getTileSizePixel());
             }
 
-            if (!modelSettingSmartwatch.getSdrLat().equalsIgnoreCase("")){
+            if ( (modelSettingSmartwatch.getSdrLat()!=null) && (!modelSettingSmartwatch.getSdrLat().equalsIgnoreCase("")) ){
                 cv.put("sdr_lat", modelSettingSmartwatch.getSdrLat());
             }
 
-            if (!modelSettingSmartwatch.getSdrLon().equalsIgnoreCase("")){
+            if ( (modelSettingSmartwatch.getSdrLon()!=null) && (!modelSettingSmartwatch.getSdrLon().equalsIgnoreCase("")) ){
                 cv.put("sdr_lon", modelSettingSmartwatch.getSdrLon());
+            }
+
+            if (modelSettingSmartwatch.getIsCompassExternal()!=null){
+                cv.put("is_compass_external", modelSettingSmartwatch.getIsCompassExternal());
             }
 
             res = this.mDatabase.update("setting_smartwatch",  cv, "_id=1", null);
@@ -660,13 +663,14 @@ public class GeoDatabase implements MasterConstants {
     }
 
     public int clearAll() {
-        int resSkenario = 0,resSkenarioPoints=0, resSituasi=0, resChat=0;
+        int resSkenario = 0,resSkenarioPoints=0, resSituasi=0, resChat=0, resPoints=0;
         if (isDatabaseReady()) {
 
             resSkenario = mDatabase.delete("pskenario", null, null);
             resSkenarioPoints = mDatabase.delete("pskenariopoints", null, null);
             resSituasi = mDatabase.delete("psituasi", null, null);
             resChat = mDatabase.delete("chat", null, null);
+            resPoints = mDatabase.delete("points", null, null);
 
             Log.d(TAG, "DbManager clear all" + resSkenario);
         }
