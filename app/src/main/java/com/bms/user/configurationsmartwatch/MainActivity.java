@@ -54,7 +54,7 @@ import com.bms.user.database.DbManager;
 import com.bms.user.listview.ListViewAdapter;
 import com.bms.user.listview.ListViewItem;
 import com.bms.user.model.ModelSetIp;
-import com.google.android.gms.wearable.DataClient;
+//import com.google.android.gms.wearable.DataClient;
 import com.google.android.gms.wearable.DataEventBuffer;
 import com.google.android.gms.wearable.Wearable;
 
@@ -108,11 +108,13 @@ public class MainActivity extends WearableActivity implements WearableListView.C
         viewItemList.add(new ListViewItem(R.drawable.ic_skateboard, "Set Ip"));
         viewItemList.add(new ListViewItem(R.drawable.ic_skateboard, "Connect Wifi"));
         viewItemList.add(new ListViewItem(R.drawable.ic_skateboard, "Set Compass"));
+        viewItemList.add(new ListViewItem(R.drawable.ic_skateboard, "About"));
 
         wearableListView.setAdapter(new ListViewAdapter(this, viewItemList));
         wearableListView.setClickListener(this);
 
         //Wearable.WearableOptions options = new Wearable.WearableOptions.Builder().setLooper(myLooper).build();
+        /*
         DataClient mDataClient = Wearable.getDataClient(this);
         Log.d(TAG, "mDataClient.getDataItems:" + mDataClient.getDataItems());
 
@@ -122,7 +124,7 @@ public class MainActivity extends WearableActivity implements WearableListView.C
             public void onDataChanged(@NonNull DataEventBuffer dataEventBuffer) {
                      Log.d(TAG, "dataEventBuffer:" + dataEventBuffer.getStatus());
             }
-        });
+        }); */
 
 
     }
@@ -305,6 +307,9 @@ public class MainActivity extends WearableActivity implements WearableListView.C
         }else if (idx==6){
             //set compass external or internal
             Intent appInfo = new Intent(this, SetCompassActivity.class);
+            startActivity(appInfo);
+        }else if(idx==7){
+            Intent appInfo = new Intent(this, AboutActivity.class);
             startActivity(appInfo);
         }
 

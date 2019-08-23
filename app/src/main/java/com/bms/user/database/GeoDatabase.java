@@ -600,6 +600,10 @@ public class GeoDatabase implements MasterConstants {
                 cv.put("is_compass_external", modelSettingSmartwatch.getIsCompassExternal());
             }
 
+            if (modelSettingSmartwatch.getSmartwatchId()!=null){
+                cv.put("id_smartwatch", modelSettingSmartwatch.getSmartwatchId());
+            }
+
             res = this.mDatabase.update("setting_smartwatch",  cv, "_id=1", null);
             Log.d(TAG, "res:" + res);
         }

@@ -2,7 +2,7 @@ package com.bms.user.model;
 
 public class ModelSettingSmartwatch {
     private int idx;
-    private long smartwatchId;
+    private Long smartwatchId;
     private String sendTo;
     private String mapsName;
     private String mapsPath;
@@ -20,7 +20,6 @@ public class ModelSettingSmartwatch {
 
     public ModelSettingSmartwatch(){
         this.idx = 0;
-        this.smartwatchId = 0;
         this.mapsName = "";
         this.mapsPath = "";
         this.group = "0";
@@ -41,11 +40,11 @@ public class ModelSettingSmartwatch {
         this.idx = idx;
     }
 
-    public long getSmartwatchId() {
+    public Long getSmartwatchId() {
         return smartwatchId;
     }
 
-    public void setSmartwatchId(long smartwatchId) {
+    public void setSmartwatchId(Long smartwatchId) {
         this.smartwatchId = smartwatchId;
     }
 

@@ -162,7 +162,9 @@ public class Ut {
         String oriPathLocation = Ut.getExternalStorageDirectory();
         Log.d("path location", "oriPathLocation:" + oriPathLocation);
 
-        return getDir(mCtx, "pref_dir_main", oriPathLocation+"/Download/bms/", aFolderName);
+        return getDir(mCtx, "pref_dir_main", oriPathLocation+"/bms/", aFolderName);
+        //return getDir(mCtx, "pref_dir_main", oriPathLocation+"/Download/bms/", aFolderName);
+
 
         //return getDir(mCtx, "pref_dir_main", Ut.getExternalStorageDirectory()+"/Download/bms/", aFolderName);
     }
